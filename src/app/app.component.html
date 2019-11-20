@@ -50,15 +50,58 @@
       </tr>
 
       <tr>
-        <td>{{ nombre }}</td>
-        <td>slice:0:3</td>
-        <td>{{ nombre | slice: 0:3 }}</td>
+        <td>{{ a }}</td>
+        <td>percent</td>
+        <td>{{ a | percent }}</td>
       </tr>
 
       <tr>
-        <td>{{ nombre }}</td>
-        <td>slice:0:3</td>
-        <td>{{ nombre | slice: 0:3 }}</td>
+        <td>{{ a }}</td>
+        <td>percent:'2.2-2'</td>
+        <td>{{ a | percent: "2.2-2" }}</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency</td>
+        <td>{{ salario | currency }}</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency:'EUR'</td>
+        <td>{{ salario | currency: "EUR" }}</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency:'EUR':false</td>
+        <td>{{ salario | currency: "EUR":false }}</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency:'EUR':true:'4.0-0'</td>
+        <td>{{ salario | currency: "EUR":true:"4.0-0" }}</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>{{ salario }}</td>
+        <td>number:'.2-2'</td>
+        <td>{{ salario | number: ".2-2" }}</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>{{ valorDePromesa }}</td>
+        <td>async</td>
+        <td>{{ valorDePromesa | async }}</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -67,4 +110,8 @@
   <ul>
     <li *ngFor="let item of arreglo | slice: 5:20">{{ item }}</li>
   </ul>
+  <h4>JSON</h4>
+  <pre>{{ heroe | json }}</pre>
+
+  <br /><br />
 </div>
